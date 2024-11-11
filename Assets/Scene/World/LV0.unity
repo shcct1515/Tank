@@ -441,7 +441,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 71ec08be4dce72040a3611fc24d97b48, type: 3}
+  m_Sprite: {fileID: 21300000, guid: daaaa7fa2c5d87641a45918af1460002, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -550,11 +550,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1549623476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9962a25c1e85dbb42a0133611cb89092, type: 3}
+  m_Script: {fileID: 11500000, guid: 4349c9f3a9f6008499e360b64bc6fb67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   offsetAngle: -90
-  bulletPrefab: {fileID: 3891354628920156888, guid: 4f3eb4bcf740599468698098716310f3, type: 3}
+  bulletPrefab: {fileID: 3891354628920156888, guid: b0b94e87f3428d547a628920fa2b62a5, type: 3}
   bulletSpeed: 10
   fireRate: 0.5
   GunPoint: {fileID: 1604464412}
