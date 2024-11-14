@@ -10,31 +10,40 @@ public class Player : MonoBehaviour
     public float bulletSpeed = 10f;
     public float fireRate = 0.5f;
     private float nextFireTime = 0f;
-    private float speedPlayer = 10f;
+    public float recoilForce = 5f;
+    private Rigidbody2D rb;
     public Transform GunPoint;
-
 
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Shoot(Vector2 direction)
     {
-        GameObject bullet = Instantiate(bulletPrefab, GunPoint.position, Quaternion.identity);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.velocity = direction.normalized * bulletSpeed;
+        float bulletAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        GameObject bullet = Instantiate(bulletPrefab, GunPoint.position, Quaternion.Euler(0, 0, bulletAngle));
+        Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
+        rbBullet.velocity = direction.normalized * bulletSpeed;
+        Vector2 recoilDirection = -direction.normalized;
+        rb.AddForce(recoilDirection * recoilForce, ForceMode2D.Impulse);
     }
 
-    void OnTrigger(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Wall"))
         {
-            Destroy(gameObject);
+            rb.velocity = Vector2.zero;
         }
-        
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            rb.velocity = Vector2.zero;
+        }
+    }
 
     void Update()
     {

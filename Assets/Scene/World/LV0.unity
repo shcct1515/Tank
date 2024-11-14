@@ -557,6 +557,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3891354628920156888, guid: b0b94e87f3428d547a628920fa2b62a5, type: 3}
   bulletSpeed: 10
   fireRate: 0.5
+  recoilForce: 10
   GunPoint: {fileID: 1604464412}
 --- !u!50 &1549623480
 Rigidbody2D:
