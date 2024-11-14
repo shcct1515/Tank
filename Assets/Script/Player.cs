@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     private float nextFireTime = 0f;
     public float recoilForce = 50f;
     public float maxSpeed = 50f;
-    public float friction = 0.995f;
+    public float friction = 0.98f;
     private Rigidbody2D rb;
     public Transform GunPoint;
 
@@ -69,10 +69,12 @@ public class Player : MonoBehaviour
         if (rb.velocity.magnitude > maxSpeed)
         {
             rb.velocity = rb.velocity.normalized * maxSpeed;
+        }
+        else
+        {
             rb.velocity *= friction;
         }
 
-        
 
     }
 }
