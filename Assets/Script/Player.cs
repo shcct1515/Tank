@@ -10,7 +10,9 @@ public class Player : MonoBehaviour
     public float bulletSpeed = 10f;
     public float fireRate = 0.5f;
     private float nextFireTime = 0f;
-    public float recoilForce = 5f;
+    public float recoilForce = 50f;
+    public float maxSpeed = 50f;
+    public float friction = 0.995f;
     private Rigidbody2D rb;
     public Transform GunPoint;
 
@@ -63,5 +65,14 @@ public class Player : MonoBehaviour
             Shoot(direction);
             nextFireTime = Time.time + fireRate;
         }
+
+        if (rb.velocity.magnitude > maxSpeed)
+        {
+            rb.velocity = rb.velocity.normalized * maxSpeed;
+            rb.velocity *= friction;
+        }
+
+        
+
     }
 }
