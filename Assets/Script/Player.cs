@@ -26,28 +26,9 @@ public class Player : MonoBehaviour
         float bulletAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         GameObject bullet = Instantiate(bulletPrefab, GunPoint.position, Quaternion.Euler(0, 0, bulletAngle));
         Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
-        rbBullet.velocity = direction.normalized * bulletSpeed;
+        rbBullet.linearVelocity = direction.normalized * bulletSpeed;
         Vector2 recoilDirection = -direction.normalized;
         rb.AddForce(recoilDirection * recoilForce, ForceMode2D.Impulse);
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Wall"))
-        {
-            Rigidbody2D rb = GetComponent<Rigidbody2D>();
-            rb.velocity = Vector2.zero;
-            rb.angularVelocity = 0f;
-        }
-    }
-
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Wall"))
-        {
-            rb.velocity = Vector2.zero;
-        }
     }
 
     void Update()
@@ -69,13 +50,13 @@ public class Player : MonoBehaviour
             nextFireTime = Time.time + fireRate;
         }
 
-        if (rb.velocity.magnitude > maxSpeed)
+        if (rb.linearVelocity.magnitude > maxSpeed)
         {
-            rb.velocity = rb.velocity.normalized * maxSpeed;
+            rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
         }
         else
         {
-            rb.velocity *= friction;
+            rb.linearVelocity *= friction;
         }
 
 

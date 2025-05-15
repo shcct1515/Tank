@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\UnityProject\\Tank\\",
+  "WorkspaceRootPath": "D:\\UnityProject\\Tank\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BE59C06D-9AAC-64A8-0390-8CA6FBC949DD}|Assembly-CSharp.csproj|e:\\unityproject\\tank\\assets\\script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE59C06D-9AAC-64A8-0390-8CA6FBC949DD}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UnityProject\\Tank\\Assets\\Script\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Script\\Player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -20,13 +20,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Player.cs",
-              "DocumentMoniker": "E:\\UnityProject\\Tank\\Assets\\Script\\Player.cs",
+              "DocumentMoniker": "D:\\UnityProject\\Tank\\Assets\\Script\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player.cs",
-              "ToolTip": "E:\\UnityProject\\Tank\\Assets\\Script\\Player.cs",
+              "ToolTip": "D:\\UnityProject\\Tank\\Assets\\Script\\Player.cs",
               "RelativeToolTip": "Assets\\Script\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T10:37:37.067Z",
+              "WhenOpened": "2025-05-04T08:41:27.693Z",
               "EditorCaption": ""
             }
           ]
