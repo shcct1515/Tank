@@ -9,7 +9,7 @@ public class Classic_Bullet : MonoBehaviour
             Destroy(gameObject);
         } else if (collision.gameObject.CompareTag("Player"))
         {
-            
+            Destroy(gameObject);
         }
     }
 }
