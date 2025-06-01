@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4323397657308440355}
   - component: {fileID: 1148859916537629822}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player_DeadPol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 1426840621574447939}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2382, y: 1.5, z: 0}
-  m_LocalScale: {x: 1.398452, y: 1.781226, z: 1}
+  m_LocalPosition: {x: 0.4756, y: 1.8274, z: 0}
+  m_LocalScale: {x: 1.8731967, y: 2.4361126, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1465397107637393009}
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetAngle: -90
   bulletPrefab: {fileID: 3891354628920156888, guid: b0b94e87f3428d547a628920fa2b62a5, type: 3}
-  bulletSpeed: 10
+  bulletSpeed: 50
   fireRate: 0.5
   recoilForce: 50
   maxSpeed: 50
@@ -211,8 +211,8 @@ Transform:
   m_GameObject: {fileID: 4815037943627737506}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0.0379, y: -0.023, z: 0}
+  m_LocalScale: {x: 0.33334807, y: 0.21667539, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3806494400449022976}
@@ -261,15 +261,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: daaaa7fa2c5d87641a45918af1460002, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.62, y: 6.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &7979655934290320977

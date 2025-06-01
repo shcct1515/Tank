@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
     public float offsetAngle = -90f;
 
     public GameObject bulletPrefab;
-    public float bulletSpeed = 10f;
     public float fireRate = 0.5f;
     private float nextFireTime = 0f;
     public float recoilForce = 50f;
@@ -23,23 +22,20 @@ public class Player : MonoBehaviour
 
     void Shoot(Vector2 direction)
     {
-        float bulletAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        GameObject bullet = Instantiate(bulletPrefab, GunPoint.position, Quaternion.Euler(0, 0, bulletAngle));
-        Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
-        rbBullet.linearVelocity = direction.normalized * bulletSpeed;
-        Vector2 recoilDirection = -direction.normalized;
-        rb.AddForce(recoilDirection * recoilForce, ForceMode2D.Impulse);
+        GameObject bullet = Instantiate(
+            bulletPrefab,
+            GunPoint.position,
+            Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg)
+        );
+
+        bullet.GetComponent<Classic_Bullet>().SetDirection(direction);
+        rb.AddForce(-direction.normalized * recoilForce, ForceMode2D.Impulse);
     }
 
     void Update()
     {
-        Vector3 mousePos = Input.mousePosition;
-        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
-        Vector2 direction = new Vector2(
-            mousePos.x - transform.position.x,
-            mousePos.y - transform.position.y
-        );
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePos - transform.position);
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle + offsetAngle);
@@ -58,7 +54,5 @@ public class Player : MonoBehaviour
         {
             rb.linearVelocity *= friction;
         }
-
-
     }
 }
