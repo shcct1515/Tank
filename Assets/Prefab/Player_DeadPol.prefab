@@ -179,11 +179,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetAngle: -90
   bulletPrefab: {fileID: 3891354628920156888, guid: b0b94e87f3428d547a628920fa2b62a5, type: 3}
-  bulletSpeed: 50
   fireRate: 0.5
-  recoilForce: 50
-  maxSpeed: 50
-  friction: 0.995
+  recoilForce: 30
+  maxSpeed: 30
+  friction: 0.95
   GunPoint: {fileID: 1465397107637393009}
 --- !u!1 &4815037943627737506
 GameObject:
