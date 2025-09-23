@@ -1,15 +1,16 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Classic_Bullet : MonoBehaviour
 {
-    public float speed = 50f;
+    public float offsetAngle = -90f;
     private Vector2 moveDirection;
 
+    public float speed = 50f;
     public void SetDirection(Vector2 dir)
     {
         moveDirection = dir.normalized;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, angle);
+        transform.rotation = Quaternion.Euler(0, 0, angle + offsetAngle);
     }
 
     void Start()
@@ -24,7 +25,10 @@ public class Classic_Bullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        } else if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }

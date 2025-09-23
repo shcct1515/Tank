@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53a6caa4e4b2164894dab8766c5cf60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetAngle: -90
   speed: 50
 --- !u!1 &6342660384583514630
 GameObject:
